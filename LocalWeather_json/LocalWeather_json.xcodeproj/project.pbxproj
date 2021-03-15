@@ -17,6 +17,7 @@
 		3285D05825F9E7CA0060049C /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285D05725F9E7CA0060049C /* HeaderTableViewCell.swift */; };
 		3285D05B25F9E7D80060049C /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285D05A25F9E7D80060049C /* WeatherTableViewCell.swift */; };
 		3285D06325FA10A90060049C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285D06225FA10A90060049C /* WeatherViewController.swift */; };
+		32AACB9D25FF276B0093B638 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AACB9C25FF276B0093B638 /* LocationInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3285D05725F9E7CA0060049C /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3285D05A25F9E7D80060049C /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		3285D06225FA10A90060049C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		32AACB9C25FF276B0093B638 /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				3285D03825F9DE650060049C /* AppDelegate.swift */,
 				3285D03A25F9DE650060049C /* SceneDelegate.swift */,
+				32AACB9C25FF276B0093B638 /* LocationInfo.swift */,
 				3285D05125F9DECC0060049C /* WeatherInfo.swift */,
 				3285D04E25F9DEAE0060049C /* JsonModel.swift */,
 				3285D05725F9E7CA0060049C /* HeaderTableViewCell.swift */,
@@ -151,6 +154,7 @@
 			files = (
 				3285D05B25F9E7D80060049C /* WeatherTableViewCell.swift in Sources */,
 				3285D04F25F9DEAE0060049C /* JsonModel.swift in Sources */,
+				32AACB9D25FF276B0093B638 /* LocationInfo.swift in Sources */,
 				3285D03925F9DE650060049C /* AppDelegate.swift in Sources */,
 				3285D05825F9E7CA0060049C /* HeaderTableViewCell.swift in Sources */,
 				3285D06325FA10A90060049C /* WeatherViewController.swift in Sources */,

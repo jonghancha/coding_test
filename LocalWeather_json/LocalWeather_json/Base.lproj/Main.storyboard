@@ -33,8 +33,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-gd-U0g">
+                                                    <rect key="frame" x="107.33333333333333" y="11" width="43.666666666666671" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5d-Xk-hkV">
-                                                    <rect key="frame" x="227" y="11" width="72" height="18"/>
+                                                    <rect key="frame" x="247" y="10" width="72" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="72" id="9hZ-QP-2df"/>
                                                     </constraints>
@@ -42,20 +48,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-gd-U0g">
-                                                    <rect key="frame" x="107.33333333333333" y="11" width="43.666666666666671" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FUZ-H0-cNd" firstAttribute="top" secondItem="0Gz-IF-9fs" secondAttribute="topMargin" id="9dC-nG-9qc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="g5d-Xk-hkV" secondAttribute="trailing" constant="39" id="9sg-ul-M3e"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="g5d-Xk-hkV" secondAttribute="trailing" constant="19" id="9sg-ul-M3e"/>
                                                 <constraint firstItem="FUZ-H0-cNd" firstAttribute="baseline" secondItem="cQ2-gd-U0g" secondAttribute="baseline" id="MUL-FL-sNe"/>
                                                 <constraint firstItem="FUZ-H0-cNd" firstAttribute="leading" secondItem="0Gz-IF-9fs" secondAttribute="leading" constant="4" id="WDE-4y-6NB"/>
-                                                <constraint firstItem="FUZ-H0-cNd" firstAttribute="baseline" secondItem="g5d-Xk-hkV" secondAttribute="baseline" id="e7Q-41-doj"/>
-                                                <constraint firstItem="g5d-Xk-hkV" firstAttribute="leading" secondItem="cQ2-gd-U0g" secondAttribute="trailing" constant="76" id="eNI-fz-vKl"/>
+                                                <constraint firstItem="FUZ-H0-cNd" firstAttribute="baseline" secondItem="g5d-Xk-hkV" secondAttribute="baseline" constant="1" id="e7Q-41-doj"/>
+                                                <constraint firstItem="g5d-Xk-hkV" firstAttribute="leading" secondItem="cQ2-gd-U0g" secondAttribute="trailing" constant="96" id="eNI-fz-vKl"/>
                                                 <constraint firstItem="cQ2-gd-U0g" firstAttribute="leading" secondItem="FUZ-H0-cNd" secondAttribute="trailing" constant="67" id="xEj-EW-OEQ"/>
                                             </constraints>
                                         </tableViewCellContentView>

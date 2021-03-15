@@ -9,11 +9,20 @@ import UIKit
 
 class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, JsonModelProtocol   {
    
+    
+   
 
     @IBOutlet weak var tableViewWeather: UITableView!
     
     
-    var locationList: NSArray = NSArray()
+    var locationList: Array<String>  = Array<String>()
+    var woeidList: Array<Int> = Array<Int>()
+    
+    var todayList: Array<String>  = Array<String>()
+    var tomorrowList: Array<String>  = Array<String>()
+    
+    
+    
 //    var todayWeather: NSArray = NSArray()
 //    var tomorrowWeather: NSArray = NSArray()
     
@@ -28,8 +37,8 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let jsonModel = JsonModel()
         jsonModel.delegate = self
-        jsonModel.downloadItems(get: "location")
-        jsonModel.downloadItems(get: "weather")
+        jsonModel.downloadItems()
+        jsonModel.downloadWeatherItems()
         // Do any additional setup after loading the view.
         // 그림 크기
 //        tableViewWeather.rowHeight = 105// Cell 높이. <----------- 중요
@@ -81,8 +90,20 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    func itemDownloaded(items: NSArray) {
-        locationList = items
+    func locationDownloaded(items: NSArray) {
+        var beanList = Array<LocationInfo>()
+        beanList = items as! [LocationInfo]
+        for item in 0...(items.count-1) {
+            locationList.append(beanList[item].locationName!)
+            woeidList.append(beanList[item].woeid!)
+        }
+        
+    }
+    
+    func weatherDownloaded(items: NSArray) {
+        
+        
+        
         self.tableViewWeather.reloadData()
         print(locationList)
     }
