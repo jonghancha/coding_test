@@ -33,6 +33,7 @@ class JsonModel: NSObject{
     
     func downloadWeatherItems(woeid: Int){
         urlPath = "https://www.metaweather.com/api/location/\(woeid)/"
+        print(urlPath)
         let url = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
@@ -41,7 +42,7 @@ class JsonModel: NSObject{
                 print("Failed to download data")
             }else{
                 print("Data is downloading")
-                    self.parseJSON(data!)
+                self.parseWeatherJSON(data!)
             }
         }
         task.resume()
@@ -59,7 +60,6 @@ class JsonModel: NSObject{
         
         do{
             jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray // json model 탈피
-            print(jsonResult)
         }catch let error as NSError{
             print(error)
         }
@@ -86,11 +86,14 @@ class JsonModel: NSObject{
     
     
     func parseWeatherJSON(_ data: Data){
-        var jsonResult = NSArray()
+         var jsonResult = NSArray()
         
         do{
-            jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSArray // json model 탈피
-            print(jsonResult)
+            var jsonFieldElement = NSDictionary()
+            jsonFieldElement = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+            if let consolidatedWeather = jsonFieldElement["consolidated_weather"] as? NSArray{
+                jsonResult = consolidatedWeather
+            }
         }catch let error as NSError{
             print(error)
         }
@@ -106,13 +109,10 @@ class JsonModel: NSObject{
             if let id = jsonElement["id"] as? Int,// let에 정상적으로 들어왔을 때.
                let weatherStateName = jsonElement["weather_state_name"] as? String,
                let weatherStateAbbr = jsonElement["weather_state_abbr"] as? String,
-               let theTemp = jsonElement["the_temp"] as? Int,
+               let theTemp = jsonElement["the_temp"] as? Double,
                let humidity = jsonElement["humidity"] as? Float{
                 
-                
-                
-                let query = WeatherInfo(id: id, weatherStateName: weatherStateName, weatherStateAbbr: weatherStateAbbr, theTemp: theTemp, humidity: humidity)
-                
+                let query = WeatherInfo(id: id, weatherStateName: weatherStateName, weatherStateAbbr: weatherStateAbbr, theTemp: Int(theTemp), humidity: Int(humidity))
                 locations.add(query)
                 
             }

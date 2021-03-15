@@ -14,7 +14,7 @@ class WeatherInfo: NSObject{
     var weatherStateName: String?
     var weatherStateAbbr: String?
     var theTemp: Int?
-    var humidity: Float?
+    var humidity: Int?
     
     
     // Empty constructor
@@ -22,7 +22,7 @@ class WeatherInfo: NSObject{
         
     }
     
-    init(id: Int, weatherStateName: String, weatherStateAbbr: String, theTemp: Int, humidity: Float){
+    init(id: Int, weatherStateName: String, weatherStateAbbr: String, theTemp: Int, humidity: Int){
         self.id = id
         self.weatherStateName = weatherStateName
         self.weatherStateAbbr = weatherStateAbbr
